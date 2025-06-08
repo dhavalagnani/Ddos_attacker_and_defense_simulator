@@ -1,0 +1,9 @@
+requests>=2.31.0
+scapy>=2.5.0
+urllib3>=2.0.7
+flask>=3.0.0
+argparse>=1.4.0
+# Note: tkinter is included with Python installation
+# For Windows: Python installer includes tkinter
+# For Linux: Install python3-tk package
+# For macOS: Python installer includes tkinter 
