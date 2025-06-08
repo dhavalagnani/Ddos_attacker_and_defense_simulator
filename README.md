@@ -16,6 +16,7 @@ This tool is for educational purposes only. Do not use it against any systems wi
 - GUI Interface with real-time monitoring
 - Test Mode for safe demonstrations
 - Request logging and analysis
+- Defense Simulation and Testing
 
 ## Requirements
 
@@ -167,6 +168,86 @@ DDoS-Simulator/
 - Test mode toggle
 - Attack configuration
 - Monitoring controls
+
+## Defense Simulation
+
+The simulator includes comprehensive defense mechanisms that can be tested and configured:
+
+### 1. Attack Detection
+
+- Real-time packet analysis
+- Request rate monitoring per IP
+- SYN flood detection
+- HTTP flood detection
+- Anomaly detection based on:
+  - Request frequency
+  - Packet patterns
+  - Connection behavior
+
+### 2. Rate Limiting
+
+- Configurable request thresholds
+- Time-based rate limiting
+- IP-based request counting
+- Automatic threshold adjustment
+- Customizable time windows
+
+### 3. IP Blocking
+
+- Automatic IP blocking
+- Configurable block duration
+- Manual IP unblocking
+- Block list management
+- Block expiration handling
+
+### 4. Monitoring and Logging
+
+- Real-time attack monitoring
+- Detailed request logging
+- IP-based statistics
+- Attack pattern analysis
+- CSV export of attack data
+
+### 5. Defense Testing
+
+To test the defense mechanisms:
+
+1. Start the monitoring system:
+
+```bash
+python interface/cli.py monitor -t 50 -w 30
+```
+
+2. Configure defense parameters:
+
+- Set request threshold
+- Set time window
+- Configure block duration
+- Enable/disable automatic blocking
+
+3. Launch a test attack:
+
+```bash
+python interface/cli.py http http://localhost:8000 -t 5 -d 30
+```
+
+4. Monitor the defense response:
+
+- Watch for IP blocks
+- Check request rates
+- Analyze attack patterns
+- Review defense logs
+
+### 6. Defense Metrics
+
+The simulator tracks various defense metrics:
+
+- Number of blocked IPs
+- Request rates per IP
+- Attack detection time
+- False positive rate
+- Block effectiveness
+- System resource usage
 
 ## Testing
 
