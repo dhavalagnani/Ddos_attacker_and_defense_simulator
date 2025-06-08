@@ -272,10 +272,6 @@ The simulator creates detailed logs:
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Disclaimer
 
 This tool is for educational purposes only. The authors are not responsible for any misuse or damage caused by this program.
